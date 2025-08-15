@@ -1,5 +1,7 @@
 
 
+import 'package:e_com/utils/theme/customTheme/app_bar_theme.dart';
+import 'package:e_com/utils/theme/customTheme/elevated_button_theme.dart';
 import 'package:e_com/utils/theme/customTheme/text_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +15,9 @@ class TAppTheme{
     primaryColor: Colors.blue,
     scaffoldBackgroundColor: Colors.white,
     textTheme:  TTextTheme.lightTheme,
-    elevatedButtonTheme: 
+    elevatedButtonTheme: TElevatedButtonTheme.lightTheme,
+    appBarTheme: TAppBar.dightMode,
+    
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -22,8 +26,9 @@ class TAppTheme{
     brightness: Brightness.light,
     primaryColor: Colors.blue,
     scaffoldBackgroundColor: Colors.black,
-    textTheme:  TTextTheme.darkTheme
-    elevatedButtonTheme: 
+    textTheme:  TTextTheme.darkTheme,
+    elevatedButtonTheme: TElevatedButtonTheme.darkTheme,
+    appBarTheme: TAppBar.darkMode,
   );
   
 }
