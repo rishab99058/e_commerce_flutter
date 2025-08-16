@@ -1,5 +1,7 @@
+import 'package:e_com/features/authentication/screen/onBoardinScreen.dart';
 import 'package:e_com/theme/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -7,11 +9,12 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       theme: TTheme.lightTheme,
       darkTheme: TTheme.darkTheme,
+      home: const OnBoardingScreen(),
     );
   }
 }

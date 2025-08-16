@@ -43,12 +43,15 @@ class TTexts {
   static const String tAppTagLine = "Learn To Code. \nFree For Everyone";
 
   // -- On Boarding Text
-  static const String tOnBoardingTitle1 = "Build Awesome Apps";
-  static const String tOnBoardingTitle2 = "Learn from YouTube";
-  static const String tOnBoardingTitle3 = "Get Code & Resources";
-  static const String tOnBoardingSubTitle1 = "Let's start your journey with us on this amazing and easy platform.";
-  static const String tOnBoardingSubTitle2 = "Get Video Tutorials of each topic to learn things easily.";
-  static const String tOnBoardingSubTitle3 = "Save time by just copy pasting complete apps you learned from videos.";
+  static const String tOnBoardingTitle1 = "Shop Smart, Shop Easy";
+  static const String tOnBoardingSubTitle1 = "Discover the best products and amazing deals—start your shopping journey with us today!";
+
+  static const String tOnBoardingTitle2 = "Fast & Secure Payments";
+  static const String tOnBoardingSubTitle2 = "Experience seamless online payments with top security, just a tap away from your next purchase.";
+
+  static const String tOnBoardingTitle3 = "Doorstep Delivery";
+  static const String tOnBoardingSubTitle3 = "Sit back and relax—your order will arrive safely at your home. Fast, reliable, and hassle-free!";
+
   static const String tOnBoardingCounter1 = "1/3";
   static const String tOnBoardingCounter2 = "2/3";
   static const String tOnBoardingCounter3 = "3/3";
