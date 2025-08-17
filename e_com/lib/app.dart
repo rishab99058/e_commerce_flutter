@@ -1,4 +1,4 @@
-import 'package:e_com/features/authentication/screen/onBoardinScreen.dart';
+import 'package:e_com/features/authentication/screen/onBoardingScreen.dart';
 import 'package:e_com/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
