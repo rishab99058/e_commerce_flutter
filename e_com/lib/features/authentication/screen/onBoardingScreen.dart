@@ -16,6 +16,9 @@ class OnBoardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    precacheImage(AssetImage(TImages.onBoardingImage1), context);
+    precacheImage(AssetImage(TImages.onBoardingImage2), context);
+    precacheImage(AssetImage(TImages.onBoardingImage3), context);
     final controller = Get.put(Onboardingcontroller());
     // final dark = THelperFunctions.isDarkMode(context);
 
