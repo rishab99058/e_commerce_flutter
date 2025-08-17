@@ -20,6 +20,7 @@ class OnBoardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final controller = Get.put(Onboardingcontroller());
+    // final dark = THelperFunctions.isDarkMode(context);
 
     return Scaffold(
       body: Stack(
@@ -51,7 +52,8 @@ class OnBoardingScreen extends StatelessWidget {
           SmoothIndicator(),
 
           Positioned( bottom: TDeviceUtils.getBottomNavigationBarHeight(),
-      right:TSizes.defaultSpace, child: ElevatedButton(onPressed:(){},style: ElevatedButton.styleFrom(shape: CircleBorder(side: BorderSide(color:TColors.iconPrimaryLight )), backgroundColor: TColors.iconPrimaryLight, ), child:  Icon(Iconsax.arrow_right_3, color: Colors.white,)),)
+      right:TSizes.defaultSpace, child: ElevatedButton(style: ElevatedButton.styleFrom(shape: CircleBorder()),
+        onPressed:()=>controller.nextPage(), child:  Icon(Iconsax.arrow_right_3)),)
          
         ],
       ),
@@ -71,13 +73,14 @@ class SmoothIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Onboardingcontroller.instance;
+    final dark = THelperFunctions.isDarkMode(context);
 
     return Positioned(
       bottom: TDeviceUtils.getBottomNavigationBarHeight()+25,
       left:TSizes.defaultSpace, 
       child: SmoothPageIndicator(controller: controller.pageController,count : 3, 
       onDotClicked: controller.dotNavigationClick,
-      effect : ExpandingDotsEffect(activeDotColor: TColors.iconPrimaryLight,dotHeight: 6)),
+      effect : ExpandingDotsEffect(activeDotColor:dark?TColors.lightBackground:TColors.darkBackground, dotHeight: 6)),
      );
   }
 }
@@ -90,7 +93,10 @@ class SkipButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller  = Onboardingcontroller.instance;
-    return Positioned(top:TDeviceUtils.getAppBarHeight(),right: TSizes.defaultSpace,child:  TextButton(onPressed: ()=>controller.skipPage, child: const Text("Skip")));
+    return Positioned(top:TDeviceUtils.getAppBarHeight(),
+    right: TSizes.defaultSpace,
+    child:  TextButton(
+      onPressed: ()=>controller.skipPage(), child: const Text("Skip")));
   }
 }
 

@@ -1,6 +1,8 @@
 import 'package:e_com/theme/custom/appBarTheme.dart';
+import 'package:e_com/theme/custom/checkBox.dart';
 import 'package:e_com/theme/custom/elevatedButtonTheme.dart';
 import 'package:e_com/theme/custom/outlineButtonTheme.dart';
+import 'package:e_com/theme/custom/textButton.dart';
 import 'package:e_com/theme/custom/textFieldTheme.dart';
 import 'package:e_com/theme/custom/textTheme.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +20,9 @@ class TTheme{
     elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
     outlinedButtonTheme: TOutlinedButtonTheme.lightOutlinedButtonTheme,
     inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
-    appBarTheme: TAppBarTheme.lightAppBarTheme
+    appBarTheme: TAppBarTheme.lightAppBarTheme,
+    checkboxTheme: TCheckboxTheme.lightCheckboxTheme,
+    textButtonTheme: TTextButtonTheme.lightTextButtonTheme
     
    );
 
@@ -32,7 +36,9 @@ class TTheme{
     elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
     outlinedButtonTheme: TOutlinedButtonTheme.darkOutlinedButtonTheme,
     inputDecorationTheme: TTextFormFieldTheme.darkInputDecorationTheme,
-    appBarTheme: TAppBarTheme.darkAppBarTheme
+    appBarTheme: TAppBarTheme.darkAppBarTheme,
+    checkboxTheme: TCheckboxTheme.darkCheckboxTheme,
+    textButtonTheme: TTextButtonTheme.darkTextButtonTheme
 
    );
 
