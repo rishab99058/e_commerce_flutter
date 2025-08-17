@@ -16,41 +16,43 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
-      body : SingleChildScrollView(
-        child: Padding(padding: TSpacingStyle.paddingWithAppBarHeight,
-        child : Column(
-          crossAxisAlignment: CrossAxisAlignment.start, // Align everything to left
-          children: [
-             Image(
-              height: 150,
-              image: AssetImage(TImages.lightAppLogo)),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: TSpacingStyle.paddingWithAppBarHeight,
+          child: Column(
+            crossAxisAlignment:
+                CrossAxisAlignment.start, // Align everything to left
+            children: [
+              Image(height: 150, image: AssetImage(TImages.lightAppLogo)),
 
-              Text(TTexts.tLoginTitle, style: Theme.of(context).textTheme.headlineMedium),
+              Text(
+                TTexts.tLoginTitle,
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
               const SizedBox(height: TSizes.sm),
-              Text(TTexts.tLoginSubTitle, style : Theme.of(context).textTheme.headlineSmall),
+              Text(
+                TTexts.tLoginSubTitle,
+                style: Theme.of(context).textTheme.headlineSmall,
+              ),
 
               FormWidget(),
               ButtonWigets(dark: dark),
 
               const SizedBox(height: TSizes.md),
 
-             const SizedBox(height: TSizes.md),
+              const SizedBox(height: TSizes.md),
 
-            SocialMeadSignInWidgets(),
-
-
-          ],
-        )
+              SocialMeadSignInWidgets(),
+            ],
+          ),
         ),
-      )
+      ),
     );
   }
 }
 
 class SocialMeadSignInWidgets extends StatelessWidget {
-  const SocialMeadSignInWidgets({
-    super.key,
-  });
+  const SocialMeadSignInWidgets({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -59,11 +61,7 @@ class SocialMeadSignInWidgets extends StatelessWidget {
         Expanded(
           child: OutlinedButton.icon(
             onPressed: () {},
-            icon: Image.asset(
-              TImages.google,
-              width: 24,
-              height: 24,
-            ),
+            icon: Image.asset(TImages.google, width: 24, height: 24),
             label: const Text("Google"),
             style: OutlinedButton.styleFrom(
               padding: const EdgeInsets.symmetric(vertical: 12),
@@ -77,11 +75,7 @@ class SocialMeadSignInWidgets extends StatelessWidget {
         Expanded(
           child: OutlinedButton.icon(
             onPressed: () {},
-            icon: Image.asset(
-              TImages.facebook,
-              width: 24,
-              height: 24,
-            ),
+            icon: Image.asset(TImages.facebook, width: 24, height: 24),
             label: const Text("Facebook"),
             style: OutlinedButton.styleFrom(
               padding: const EdgeInsets.symmetric(vertical: 12),
@@ -97,10 +91,7 @@ class SocialMeadSignInWidgets extends StatelessWidget {
 }
 
 class ButtonWigets extends StatelessWidget {
-  const ButtonWigets({
-    super.key,
-    required this.dark,
-  });
+  const ButtonWigets({super.key, required this.dark});
 
   final bool dark;
 
@@ -109,30 +100,42 @@ class ButtonWigets extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Flexible(child: Divider(color: dark? TColors.darkGrey:TColors.grey, thickness: 0.5, indent: 60, endIndent: 5)),
-        Text("Or Sign In with",style: Theme.of(context).textTheme.labelMedium),
-         Flexible(child: Divider(color: dark? TColors.darkGrey:TColors.grey, thickness: 0.5, indent: 5, endIndent: 60)),
+        Flexible(
+          child: Divider(
+            color: dark ? TColors.darkGrey : TColors.grey,
+            thickness: 0.5,
+            indent: 60,
+            endIndent: 5,
+          ),
+        ),
+        Text("Or Sign In with", style: Theme.of(context).textTheme.labelMedium),
+        Flexible(
+          child: Divider(
+            color: dark ? TColors.darkGrey : TColors.grey,
+            thickness: 0.5,
+            indent: 5,
+            endIndent: 60,
+          ),
+        ),
       ],
     );
   }
 }
 
 class FormWidget extends StatelessWidget {
-  const FormWidget({
-    super.key,
-  });
+  const FormWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Form(child: 
-    Padding(
-      padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
-      child: Column(
-           children: [
+    return Form(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
+        child: Column(
+          children: [
             TextFormField(
               decoration: InputDecoration(
                 prefixIcon: Icon(Iconsax.direct_right),
-                labelText: TTexts.email
+                labelText: TTexts.email,
               ),
             ),
             const SizedBox(height: TSizes.spaceBtwInputFields),
@@ -140,35 +143,48 @@ class FormWidget extends StatelessWidget {
               decoration: InputDecoration(
                 prefixIcon: Icon(Iconsax.password_check),
                 labelText: TTexts.password,
-                suffixIcon: Icon(Iconsax.eye_slash)
+                suffixIcon: Icon(Iconsax.eye_slash),
               ),
             ),
-      
-            const SizedBox(height: TSizes.spaceBtwInputFields/2),
-      
+
+            const SizedBox(height: TSizes.spaceBtwInputFields / 2),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-               Row(
-                children: [
-                   Checkbox(value: true, onChanged: (value){}),
-                    Text(TTexts.tRememberMe)
-                ],
-               ),
-              
-               TextButton(onPressed: (){}, child: const Text(TTexts.tForgetPassword)),
-      
+                Row(
+                  children: [
+                    Checkbox(value: true, onChanged: (value) {}),
+                    Text(TTexts.tRememberMe),
+                  ],
+                ),
+
+                TextButton(
+                  onPressed: () {},
+                  child: const Text(TTexts.tForgetPassword),
+                ),
               ],
             ),
             const SizedBox(height: TSizes.spaceBtwSections),
-            SizedBox(width: double.infinity,child: ElevatedButton(onPressed: (){}, child: const Text("Sign In"))),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: const Text("Sign In"),
+              ),
+            ),
             const SizedBox(height: TSizes.sm),
-            SizedBox(width: double.infinity,child: OutlinedButton(onPressed: ()=>Get.to(()=>const SignUp()), child: const Text("Create Account"))),
+            SizedBox(
+              width: double.infinity,
+              child: OutlinedButton(
+                onPressed: () => Get.to(() => const SignUp()),
+                child: const Text("Create Account"),
+              ),
+            ),
             const SizedBox(height: TSizes.spaceBtwSections),
-      
-           ],
+          ],
+        ),
       ),
-    )
     );
   }
 }

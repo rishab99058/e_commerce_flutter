@@ -11,14 +11,11 @@ import 'package:get/get_instance/get_instance.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:iconsax/iconsax.dart';
 
-
-
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-
     final controller = Get.put(Onboardingcontroller());
     // final dark = THelperFunctions.isDarkMode(context);
 
@@ -51,10 +48,15 @@ class OnBoardingScreen extends StatelessWidget {
 
           SmoothIndicator(),
 
-          Positioned( bottom: TDeviceUtils.getBottomNavigationBarHeight(),
-      right:TSizes.defaultSpace, child: ElevatedButton(style: ElevatedButton.styleFrom(shape: CircleBorder()),
-        onPressed:()=>controller.nextPage(), child:  Icon(Iconsax.arrow_right_3)),)
-         
+          Positioned(
+            bottom: TDeviceUtils.getBottomNavigationBarHeight(),
+            right: TSizes.defaultSpace,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(shape: CircleBorder()),
+              onPressed: () => controller.nextPage(),
+              child: Icon(Iconsax.arrow_right_3),
+            ),
+          ),
         ],
       ),
     );
@@ -64,11 +66,7 @@ class OnBoardingScreen extends StatelessWidget {
 class SmoothIndicator extends StatelessWidget {
   // final dark = THelperFunctions.isDarkMode(context);
   // final controller = Onboardingcontroller.instance;
-  const SmoothIndicator({
-    super.key,
-  });
-  
-
+  const SmoothIndicator({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -76,27 +74,37 @@ class SmoothIndicator extends StatelessWidget {
     final dark = THelperFunctions.isDarkMode(context);
 
     return Positioned(
-      bottom: TDeviceUtils.getBottomNavigationBarHeight()+25,
-      left:TSizes.defaultSpace, 
-      child: SmoothPageIndicator(controller: controller.pageController,count : 3, 
-      onDotClicked: controller.dotNavigationClick,
-      effect : ExpandingDotsEffect(activeDotColor:dark?TColors.lightBackground:TColors.darkBackground, dotHeight: 6)),
-     );
+      bottom: TDeviceUtils.getBottomNavigationBarHeight() + 25,
+      left: TSizes.defaultSpace,
+      child: SmoothPageIndicator(
+        controller: controller.pageController,
+        count: 3,
+        onDotClicked: controller.dotNavigationClick,
+        effect: ExpandingDotsEffect(
+          activeDotColor: dark
+              ? TColors.lightBackground
+              : TColors.darkBackground,
+          dotHeight: 6,
+        ),
+      ),
+    );
   }
 }
 
 class SkipButton extends StatelessWidget {
-  const SkipButton({
-    super.key,
-  });
+  const SkipButton({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final controller  = Onboardingcontroller.instance;
-    return Positioned(top:TDeviceUtils.getAppBarHeight(),
-    right: TSizes.defaultSpace,
-    child:  TextButton(
-      onPressed: ()=>controller.skipPage(), child: const Text("Skip")));
+    final controller = Onboardingcontroller.instance;
+    return Positioned(
+      top: TDeviceUtils.getAppBarHeight(),
+      right: TSizes.defaultSpace,
+      child: TextButton(
+        onPressed: () => controller.skipPage(),
+        child: const Text("Skip"),
+      ),
+    );
   }
 }
 
@@ -115,8 +123,10 @@ class OnBoardingPage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(12.0),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center, // Content vertically centered
-        crossAxisAlignment: CrossAxisAlignment.center, // Content horizontally centered
+        mainAxisAlignment:
+            MainAxisAlignment.center, // Content vertically centered
+        crossAxisAlignment:
+            CrossAxisAlignment.center, // Content horizontally centered
         children: [
           Image(
             width: THelperFunctions.screenWidth() * 0.8,

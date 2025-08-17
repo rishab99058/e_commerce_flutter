@@ -60,102 +60,119 @@ class SignUp extends StatelessWidget {
                             ),
                           ],
                         ),
-                        
-                        const SizedBox(height: TSizes.spaceBtwInputFields), 
-                        TextFormField(
-                                expands: false,
-                                decoration: const InputDecoration(
-                                  labelText: TTexts.email,
-                                  prefixIcon: Icon(Iconsax.direct_right),
-                                ),
-                              ),
+
                         const SizedBox(height: TSizes.spaceBtwInputFields),
-                         TextFormField(
-                                expands: false,
-                                decoration: const InputDecoration(
-                                  labelText: TTexts.phoneNo,
-                                  prefixIcon: Icon(Iconsax.call),
-                                ),
-                              ),
+                        TextFormField(
+                          expands: false,
+                          decoration: const InputDecoration(
+                            labelText: TTexts.email,
+                            prefixIcon: Icon(Iconsax.direct_right),
+                          ),
+                        ),
+                        const SizedBox(height: TSizes.spaceBtwInputFields),
+                        TextFormField(
+                          expands: false,
+                          decoration: const InputDecoration(
+                            labelText: TTexts.phoneNo,
+                            prefixIcon: Icon(Iconsax.call),
+                          ),
+                        ),
 
-                              const SizedBox(height: TSizes.spaceBtwInputFields),
-            TextFormField(
-              decoration: InputDecoration(
-                prefixIcon: Icon(Iconsax.password_check),
-                labelText: TTexts.password,
-                suffixIcon: Icon(Iconsax.eye_slash)
-              ),
-            ), 
+                        const SizedBox(height: TSizes.spaceBtwInputFields),
+                        TextFormField(
+                          decoration: InputDecoration(
+                            prefixIcon: Icon(Iconsax.password_check),
+                            labelText: TTexts.password,
+                            suffixIcon: Icon(Iconsax.eye_slash),
+                          ),
+                        ),
 
-             const SizedBox(height: TSizes.spaceBtwInputFields),
-            TextFormField(
-              decoration: InputDecoration(
-                prefixIcon: Icon(Iconsax.password_check),
-                labelText : "Confirm Password",
-                suffixIcon: Icon(Iconsax.eye_slash)
-              ),
-            ),
-             
-             const SizedBox(height: TSizes.spaceBtwSections),
-            SizedBox(width: double.infinity,child: ElevatedButton(onPressed: (){}, child: const Text("Sign Up"))),
+                        const SizedBox(height: TSizes.spaceBtwInputFields),
+                        TextFormField(
+                          decoration: InputDecoration(
+                            prefixIcon: Icon(Iconsax.password_check),
+                            labelText: "Confirm Password",
+                            suffixIcon: Icon(Iconsax.eye_slash),
+                          ),
+                        ),
 
+                        const SizedBox(height: TSizes.spaceBtwSections),
+                        SizedBox(
+                          width: double.infinity,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            child: const Text("Sign Up"),
+                          ),
+                        ),
                       ],
                     ),
               ),
 
               const SizedBox(height: TSizes.spaceBtwSections),
               // Social Media Dividers
-               Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Flexible(child: Divider(color: dark? TColors.darkGrey:TColors.grey, thickness: 0.5, indent: 60, endIndent: 5)),
-        Text("Or Sign In with",style: Theme.of(context).textTheme.labelMedium),
-         Flexible(child: Divider(color: dark? TColors.darkGrey:TColors.grey, thickness: 0.5, indent: 5, endIndent: 60)),
-      ],
-               ),
- const SizedBox(height: TSizes.spaceBtwSections),
-               // social media buttons
-
-                Row(
-      children: [
-        Expanded(
-          child: OutlinedButton.icon(
-            onPressed: () {},
-            icon: Image.asset(
-              TImages.google,
-              width: 24,
-              height: 24,
-            ),
-            label: const Text("Google"),
-            style: OutlinedButton.styleFrom(
-              padding: const EdgeInsets.symmetric(vertical: 12),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Flexible(
+                    child: Divider(
+                      color: dark ? TColors.darkGrey : TColors.grey,
+                      thickness: 0.5,
+                      indent: 60,
+                      endIndent: 5,
+                    ),
+                  ),
+                  Text(
+                    "Or Sign In with",
+                    style: Theme.of(context).textTheme.labelMedium,
+                  ),
+                  Flexible(
+                    child: Divider(
+                      color: dark ? TColors.darkGrey : TColors.grey,
+                      thickness: 0.5,
+                      indent: 5,
+                      endIndent: 60,
+                    ),
+                  ),
+                ],
               ),
-            ),
-          ),
-        ),
-        const SizedBox(width: TSizes.spaceBtwItems),
-        Expanded(
-          child: OutlinedButton.icon(
-            onPressed: () {},
-            icon: Image.asset(
-              TImages.facebook,
-              width: 24,
-              height: 24,
-            ),
-            label: const Text("Facebook"),
-            style: OutlinedButton.styleFrom(
-              padding: const EdgeInsets.symmetric(vertical: 12),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
-              ),
-            ),
-          ),
-        ),
-      ],
-    )
+              const SizedBox(height: TSizes.spaceBtwSections),
 
+              // social media buttons
+              Row(
+                children: [
+                  Expanded(
+                    child: OutlinedButton.icon(
+                      onPressed: () {},
+                      icon: Image.asset(TImages.google, width: 24, height: 24),
+                      label: const Text("Google"),
+                      style: OutlinedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: TSizes.spaceBtwItems),
+                  Expanded(
+                    child: OutlinedButton.icon(
+                      onPressed: () {},
+                      icon: Image.asset(
+                        TImages.facebook,
+                        width: 24,
+                        height: 24,
+                      ),
+                      label: const Text("Facebook"),
+                      style: OutlinedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
