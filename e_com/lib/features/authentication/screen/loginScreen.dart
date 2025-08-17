@@ -1,10 +1,12 @@
 import 'package:e_com/common/style/spacingStyle.dart';
+import 'package:e_com/features/authentication/screen/signUpScreen.dart';
 import 'package:e_com/utils/constants/colors.dart';
 import 'package:e_com/utils/constants/images.dart';
 import 'package:e_com/utils/constants/sizes.dart';
 import 'package:e_com/utils/constants/textStrings.dart';
 import 'package:e_com/utils/helpers/helperFunction.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -137,7 +139,7 @@ class FormWidget extends StatelessWidget {
             TextFormField(
               decoration: InputDecoration(
                 prefixIcon: Icon(Iconsax.password_check),
-                labelText: TTexts.email,
+                labelText: TTexts.password,
                 suffixIcon: Icon(Iconsax.eye_slash)
               ),
             ),
@@ -161,7 +163,7 @@ class FormWidget extends StatelessWidget {
             const SizedBox(height: TSizes.spaceBtwSections),
             SizedBox(width: double.infinity,child: ElevatedButton(onPressed: (){}, child: const Text("Sign In"))),
             const SizedBox(height: TSizes.sm),
-            SizedBox(width: double.infinity,child: OutlinedButton(onPressed: (){}, child: const Text("Create Account"))),
+            SizedBox(width: double.infinity,child: OutlinedButton(onPressed: ()=>Get.to(()=>const SignUp()), child: const Text("Create Account"))),
             const SizedBox(height: TSizes.spaceBtwSections),
       
            ],
