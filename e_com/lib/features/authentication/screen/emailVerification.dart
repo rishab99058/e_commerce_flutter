@@ -1,4 +1,5 @@
 import 'package:e_com/features/authentication/screen/loginScreen.dart';
+import 'package:e_com/features/authentication/screen/successScreen.dart';
 import 'package:e_com/utils/constants/images.dart';
 import 'package:e_com/utils/constants/sizes.dart';
 import 'package:e_com/utils/constants/textStrings.dart';
@@ -62,7 +63,7 @@ class EmailVerification extends StatelessWidget {
                    SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
-                            onPressed: (){},
+                            onPressed: ()=> Get.to(()=>SuccessScreen()),
                             child: const Text("Continue"),
                           ),
                         ),

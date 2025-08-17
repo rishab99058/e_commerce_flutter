@@ -133,6 +133,11 @@ class TTexts {
   static const String tResendEmailLink = "Resend E-Mail Link";
   static const String tBackToLogin = "Back to login";
 
+  // Success Email
+  static const String tEmailVerificationSuccessTitle = "Email Verified!";
+  static const String tEmailVerificationSuccessMessage =
+    "Your email has been successfully verified! You can now continue using the app.";
+
   // -- Dashboard Screen - Text
   static const String tDashboardTitle = "Hey, Coding with T";
   static const String tDashboardHeading = "Explore Courses";
