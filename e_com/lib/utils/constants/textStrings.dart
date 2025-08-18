@@ -91,6 +91,10 @@ class TTexts {
   static const String tForgetPasswordSubTitle = "Select one of the options given below to reset your password.";
   static const String tResetViaEMail = "Reset via Mail Verification";
   static const String tResetViaPhone = "Reset via Phone Verification";
+  static const String forgotPassword = "Forgot Password !!";
+static const String forgotPasswordSubHeading = 
+    "No worries! It happens to everyone. Enter your email and we’ll send you a password reset link.";
+
 
   // -- Forget Password Via Phone - Text
   static const String tForgetPhoneSubTitle = "Enter your registered Phone No to receive OTP";
@@ -137,6 +141,20 @@ class TTexts {
   static const String tEmailVerificationSuccessTitle = "Email Verified!";
   static const String tEmailVerificationSuccessMessage =
     "Your email has been successfully verified! You can now continue using the app.";
+
+  // Reset Password
+  static const String tResetPasswordTitle = "Check your email";
+static const String tResetPasswordSubTitle =
+    "We’ve sent a password reset link to your email address. "
+    "Open your inbox and click the link to create a new password.\n\n"
+    "If you’re not automatically redirected after resetting, tap Continue.";
+
+static const String tOpenEmailApp = "Open Email App";
+static const String tDidntReceiveEmail = "Didn’t receive the email?";
+static const String tResendResetLink = "Resend Reset Link";
+static const String tUseAnotherEmail = "Use another email";
+
+
 
   // -- Dashboard Screen - Text
   static const String tDashboardTitle = "Hey, Coding with T";

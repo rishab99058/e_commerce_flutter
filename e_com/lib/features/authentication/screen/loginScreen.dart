@@ -1,4 +1,5 @@
 import 'package:e_com/common/style/spacingStyle.dart';
+import 'package:e_com/features/authentication/screen/forgotPassword.dart';
 import 'package:e_com/features/authentication/screen/signUpScreen.dart';
 import 'package:e_com/utils/constants/colors.dart';
 import 'package:e_com/utils/constants/images.dart';
@@ -160,7 +161,7 @@ class FormWidget extends StatelessWidget {
                 ),
 
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(()=> ForgotPassword()),
                   child: const Text(TTexts.tForgetPassword),
                 ),
               ],
